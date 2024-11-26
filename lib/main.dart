@@ -31,21 +31,22 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const DividerComponent(title: 'Flutter Widget Fundamental'),
+      home:
+          const HorizontalLayoutComponent(title: 'Flutter Widget Fundamental'),
     );
   }
 }
 
-// HORIZONTAL COMPONENT
-class HorizontalDividerComponent extends StatelessWidget {
-  const HorizontalDividerComponent({super.key, required this.title});
+// VERTICAL LAYOUT COMPONENT
+class VerticalLayoutComponent extends StatelessWidget {
+  const VerticalLayoutComponent({super.key, required this.title});
   final String title;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Horizontal Divier'),
+        title: const Text('Vertical Layout'),
       ),
       body: Container(
         padding: const EdgeInsets.all(10),
@@ -98,16 +99,16 @@ class HorizontalDividerComponent extends StatelessWidget {
   }
 }
 
-// VERTICAL COMPONENT
-class VerticalDividerComponent extends StatelessWidget {
-  const VerticalDividerComponent({super.key, required this.title});
+// HORIZONTAL LAYOUT COMPONENT
+class HorizontalLayoutComponent extends StatelessWidget {
+  const HorizontalLayoutComponent({super.key, required this.title});
   final String title;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Vertical Divider'),
+        title: const Text('Horizontal Layout'),
       ),
       body: Container(
         padding: const EdgeInsets.all(10),
@@ -161,16 +162,16 @@ class VerticalDividerComponent extends StatelessWidget {
   }
 }
 
-// MOVIE CARD COMPONENT WITH HORIZONTAL AND VERTICAL DIVIDER
-class DividerComponent extends StatelessWidget {
-  const DividerComponent({super.key, required this.title});
+// CARD COMPONENT WITH HORIZONTAL AND VERTICAL LAYOUT
+class CardLayoutComponent extends StatelessWidget {
+  const CardLayoutComponent({super.key, required this.title});
   final String title;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Divider'),
+          title: const Text('Example Card Layout'),
         ),
         body: SingleChildScrollView(
           padding: EdgeInsets.all(10),
@@ -179,7 +180,7 @@ class DividerComponent extends StatelessWidget {
             children: [
               Container(height: 10),
 
-              // Vertical Divider
+              // Search Box
               Card(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(6)),
